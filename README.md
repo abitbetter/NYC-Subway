@@ -12,7 +12,15 @@
 
 # Section 1. Statistical Test
 
+```
 1.1 Which statistical test did you use to analyze the NYC subway data? Did you use a one-tail or a two-tail P value? What is the null hypothesis? What is your p-critical value?
+a) Welch T test and Mann Withney test are used.
+b) A one tail P value is used as we want to know if NYC subway ridership is greater given rainy days.
+c) The null hypothesis is: Ho: u-rain >  u-no-rain
+The alterntaive hypothesis is: u-rain <= u-no-rain
+d) The choosed p-critical value is 
+```
+
 
 1.2 Why is this statistical test applicable to the dataset? In particular, consider the assumptions that the test is making about the distribution of ridership in the two samples.
 
