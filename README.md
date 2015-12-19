@@ -12,19 +12,56 @@
 
 # Section 1. Statistical Test
 
-```
+
 1.1 Which statistical test did you use to analyze the NYC subway data? Did you use a one-tail or a two-tail P value? What is the null hypothesis? What is your p-critical value?
+```
 a) Welch T test and Mann Withney test are used.
 b) A one tail P value is used as we want to know if NYC subway ridership is greater given rainy days.
-c) The null hypothesis is: Ho: u-rain >  u-no-rain
-The alterntaive hypothesis is: u-rain <= u-no-rain
-d) The choosed p-critical value is 
+c) The null hypothesis is: Ho: u-rain <=  u-no-rain
+   The alterntaive hypothesis is: H1: u-rain > u-no-rain
+d) The chosen p-critical value is 0.05.
 ```
 
 
 1.2 Why is this statistical test applicable to the dataset? In particular, consider the assumptions that the test is making about the distribution of ridership in the two samples.
+```
+Both Welch T test and Mann Whitney test make the assumption of independent samples (with no overlap in ridership).  Also in this dataset the two samples have unequal variances and unequal sample sizes.  Therefore both statistical tests can be applied.
+```
 
 1.3 What results did you get from this statistical test? These should include the following numerical values: p-values, as well as the means for each of the two samples under test.
+```
+Hourly entries with rain:    mean = 1105.45, variance = 5.61927e+06
+Hourly entries without rain: mean = 1090.28, variance = 5.38236e+06
+Welch T test: t = 1.10421, two-tail p = 0.269506, one-tail p = 0.134753
+Mann Whitney test: U = 1.92441e+09, p = 0.0193096
+```
 
 1.4 What is the significance and interpretation of these results?
+```
+With Welch T test p = 0.134753 > 0.05 => Null hypothesis is not rejected.  We cannot conclude that both samples have different mean.
+With Mann Whitney test p = 0.01936 < 0.05 => Null hypothesis is rejected.  We cannot conclude that both samples have same mean.
+```
 
+
+# Section 2. Linear Regression
+
+2.1 What approach did you use to compute the coefficients theta and produce prediction for ENTRIESn_hourly in your regression model:
+
+    OLS using Statsmodels or Scikit Learn
+    Gradient descent using Scikit Learn
+    Or something different?
+
+2.2 What features (input variables) did you use in your model? Did you use any dummy variables as part of your features?
+
+2.3 Why did you select these features in your model? We are looking for specific reasons that lead you to believe that
+
+the selected features will contribute to the predictive power of your model.
+
+    Your reasons might be based on intuition. For example, response for fog might be: “I decided to use fog because I thought that when it is very foggy outside people might decide to use the subway more often.”
+    Your reasons might also be based on data exploration and experimentation, for example: “I used feature X because as soon as I included it in my model, it drastically improved my R2 value.”  
+
+2.4 What are the parameters (also known as "coefficients" or "weights") of the non-dummy features in your linear regression model?
+
+2.5 What is your model’s R2 (coefficients of determination) value?
+
+2.6 What does this R2 value mean for the goodness of fit for your regression model? Do you think this linear model to predict ridership is appropriate for this dataset, given this R2  value?
