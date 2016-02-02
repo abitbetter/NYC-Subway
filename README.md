@@ -15,30 +15,28 @@
 
 1.1 Which statistical test did you use to analyze the NYC subway data? Did you use a one-tail or a two-tail P value? What is the null hypothesis? What is your p-critical value?
 ```
-a) Welch T test and Mann Withney test are used.
+a) Mann Withney test is used to analyze NYC subway data.
 b) A one tail P value is used as we want to know if NYC subway ridership is greater given rainy days.
-c) The null hypothesis is: Ho: u-rain <=  u-no-rain
-   The alterntaive hypothesis is: H1: u-rain > u-no-rain
+c) The null hypothesis is: Ho: P(ridership|rain > ridership|no-rain) >=  0.5
+   The alterntaive hypothesis is: H1: P(ridership|rain > ridership|no-rain) <  0.5
 d) The chosen p-critical value is 0.05.
 ```
 
 
 1.2 Why is this statistical test applicable to the dataset? In particular, consider the assumptions that the test is making about the distribution of ridership in the two samples.
 ```
-Both Welch T test and Mann Whitney test make the assumption of independent samples (with no overlap in ridership).  Also in this dataset the two samples have unequal variances and unequal sample sizes.  Therefore both statistical tests can be applied.
+Mann Whitney test makes the assumption of independent samples (with no overlap in ridership).  Also there are far more samples than 20 in the dataset and a priori both distributions are unknown.  Therefore the statistical test can be applied.
 ```
 
 1.3 What results did you get from this statistical test? These should include the following numerical values: p-values, as well as the means for each of the two samples under test.
 ```
 Hourly entries with rain:    mean = 1105.45, variance = 2.47832e+11
 Hourly entries without rain: mean = 1090.28, variance = 4.72824e+11
-Welch T test: t = 1.10421, two-tail p = 0.269506, one-tail p = 0.134753
 Mann Whitney test: U = 1.92441e+09, p = 0.0193096
 ```
 
 1.4 What is the significance and interpretation of these results?
 ```
-With Welch T test p = 0.134753 > 0.05 => Null hypothesis is not rejected.  We cannot state that both samples have different mean.
 With Mann Whitney test p = 0.01936 < 0.05 => Null hypothesis is rejected.  We can state that on rainy days there is more ridership at the NYC subway.
 ```
 
