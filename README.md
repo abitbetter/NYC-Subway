@@ -17,8 +17,8 @@
 ```
 a) Mann Withney test is used to analyze NYC subway data.
 b) A one tail P value is used as we want to know if NYC subway ridership is greater given rainy days.
-c) The null hypothesis is: Ho: P(ridership|rain > ridership|no-rain) >=  0.5
-   The alterntaive hypothesis is: H1: P(ridership|rain > ridership|no-rain) <  0.5
+c) The null hypothesis is: Ho: P(ridership|no-rain > ridership|rain) >=  0.5
+   The alterntaive hypothesis is: H1: P(ridership|no-rain > ridership|rain) <  0.5
 d) The chosen p-critical value is 0.05.
 ```
 
