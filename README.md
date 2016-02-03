@@ -54,7 +54,7 @@ I used an OLS approach for computing coeficients and produce a prediction.
 
 2.2 What features (input variables) did you use in your model? Did you use any dummy variables as part of your features?
 ```
-I used 'maxdewpti','minpressurei','fog','rain','mintempi','meantempi' and UNIT as dummy variable.
+I used 'meanwindspdi','meantempi','precipi','rain', 'Hour','maxtempi' and UNIT as dummy variable.
 ```
 2.3 Why did you select these features in your model? We are looking for specific reasons that lead you to believe that
 
@@ -69,21 +69,25 @@ At first I thought that meteorological magnitudes linked with rain would improve
 
 2.4 What are the parameters (also known as "coefficients" or "weights") of the non-dummy features in your linear regression model?
 ```
-intercept        11712.977809
-maxdewpti          19.467820
-minpressurei     -320.859344
-fog                46.255463
-rain             -133.283497
-mintempi          -56.167069
-meantempi          23.311473
+intercept         992.499526
+meanwindspdi      21.398801
+meantempi        -29.920590
+precipi           32.292600
+rain              22.553125
+Hour              67.418064
+maxtempi          23.017546
 ```
 
 2.5 What is your model’s R2 (coefficients of determination) value?
 ```
-R^2 coefficient = 0.420821
+R^2 coefficient = 0.458889
 ```
 
 2.6 What does this R2 value mean for the goodness of fit for your regression model? Do you think this linear model to predict ridership is appropriate for this dataset, given this R2  value?
 ```
-The previous value is a low value, saying that my regression model does not fit well the given data.  This means that it is not a good model to use for prediction.
+The previous value is a low value, saying that my regression model does not fit well the given data.  This means that it is not a good model to use for prediction.  This means that the ratio of residual variability is high and the model only explains a 46% of the original variability. Finally R is a masurement of how well predictors are related with the independent variable.
 ```
+
+# Section 3. Visualization
+
+3.1 Visuzlization of ENTRIESn_hourly for rainy days and one of ENTRIESn_hourly for non-rainy days.
