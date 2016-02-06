@@ -94,6 +94,12 @@ The previous value is a low value, saying that my regression model does not fit 
 ![alt text](https://cloud.githubusercontent.com/assets/7275475/12863478/e100dab4-cc76-11e5-9efd-ea802f0cd9f4.png "NYC_Ridership_Histogram")
 
 3.2 One visualization can be more freeform. You should feel free to implement something that we discussed in class (e.g., scatter plots, line plots) or attempt to implement something more advanced if you'd like.
+![alt text](https://cloud.githubusercontent.com/assets/7275475/12863551/a7c477e6-cc77-11e5-8eef-c0901f1127ef.png)
+
+![alt text](https://cloud.githubusercontent.com/assets/7275475/12863553/aba5525e-cc77-11e5-8bab-1ec20a819c43.png)
+
+![alt text](https://cloud.githubusercontent.com/assets/7275475/12863555/ae45c4da-cc77-11e5-9acc-753f0a91b51f.png)
+
 
 # Section 4. Conclusion
 
