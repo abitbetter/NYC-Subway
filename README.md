@@ -91,6 +91,7 @@ The previous value is a low value, saying that my regression model does not fit 
 # Section 3. Visualization
 
 3.1 Visualization of ENTRIESn_hourly for rainy days and one of ENTRIESn_hourly for non-rainy days.
+![alt text](https://cloud.githubusercontent.com/assets/7275475/12863478/e100dab4-cc76-11e5-9efd-ea802f0cd9f4.png "NYC_Ridership_Histogram")
 
 # Section 4. Conclusion
 
