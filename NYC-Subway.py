@@ -16,6 +16,8 @@ from scipy.stats import ttest_ind
 import pandas
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
+import datetime
+from ggplot import *
 
 ##################
 # 1.- Fetch Data #
@@ -57,7 +59,7 @@ print "Mann Whitney test: U = %g, p = %g" % (U, p)
 #########################
 # 4.- Linear Regression #
 #########################
-features = weather[['maxdewpti','minpressurei','fog','rain','mintempi','meantempi']]
+features = weather[['meanwindspdi','meantempi','precipi','rain', 'Hour','maxtempi']]
 dummy_units = pandas.get_dummies(weather['UNIT'], prefix='unit')
 features = features.join(dummy_units)
 values = weather['ENTRIESn_hourly']
@@ -85,3 +87,32 @@ r_squared = 1 - NUM/DEN
 
 print "R^2 coefficient = %g" % r_squared
 print DEN, NUM, r_squared
+
+
+##################################################################################
+# 5.- Visualization of histogram and ridership by time-of-day and by day-of-week #
+##################################################################################
+
+# Histrogram
+plt.xlabel('ENTRIESn_hourly')
+plt.ylabel('Frequency')
+plt.title('Histogram of ENTRIESn_hourly')
+plt.axis([0, 6000, 0, 45000])
+plt.hist([days_without_rain], bins = 200, color = ['blue'], alpha = 1, label = "No Rain")
+plt.hist([days_with_rain], bins = 200, color = ['yellow'], alpha = 1, label = "Rain")
+plt.legend()
+
+# Ridership by day-of-week
+dom = weather[['DATEn', 'ENTRIESn_hourly']].groupby('DATEn', as_index = False).sum()
+dom['Day'] = [datetime.datetime.strptime(x, '%Y-%m-%d').strftime('%w %A') for x in dom['DATEn']]
+day = dom[['ENTRIESn_hourly', 'Day']].groupby('Day', as_index = False).sum()
+ggplot(day, aes(x='Day', y='ENTRIESn_hourly')) + geom_bar(aes(weight='ENTRIESn_hourly'), fill='orange') + ggtitle('NYC Subway Ridership By Day of Week') + xlab('Day') + ylab('Entries')
+
+# Ridership by day-of-month
+dom['DAY'] = [x[len(x)-2:len(x)] for x in dom['DATEn']] 
+ggplot(dom, aes(x='DAY', y='ENTRIESn_hourly')) + geom_bar(aes(weight='ENTRIESn_hourly'), fill='blue') + ggtitle('NYC Subway Ridership By Day of Month') + xlab('Date') + ylab('Entries')
+
+# Ridership by time-of-day
+weather['HOUR'] = [x[0:2] for x in weather['TIMEn']]
+day_time = weather[['HOUR', 'ENTRIESn_hourly']].groupby('HOUR', as_index = False).sum()
+ggplot(day_time, aes(x='HOUR', y='ENTRIESn_hourly')) + geom_bar(aes(weight='ENTRIESn_hourly'), fill='blue') + ggtitle('NYC Subway Ridership By Time of Day') + xlab('Hour') + ylab('Entries')
