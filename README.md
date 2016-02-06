@@ -90,4 +90,22 @@ The previous value is a low value, saying that my regression model does not fit 
 
 # Section 3. Visualization
 
-3.1 Visuzlization of ENTRIESn_hourly for rainy days and one of ENTRIESn_hourly for non-rainy days.
+3.1 Visualization of ENTRIESn_hourly for rainy days and one of ENTRIESn_hourly for non-rainy days.
+
+# Section 4. Conclusion
+
+4.1 From your analysis and interpretation of the data, do more people ride the NYC subway when it is raining or when it is not raining?
+If we look barely to the histogram of 3.1 we could wrongly say that there is more ridership at days without rain than at days with rain.  But this is not true as Mann Whitney test results show.  With Mann Whitney test p = 0.01936 < 0.05 => Null hypothesis is rejected.  We can state that on rainy days there is more ridership at the NYC subway.
+
+4.2 What analyses lead you to this conclusion? You should use results from both your statistical tests and your linear regression to support your analysis.
+
+As said before, after running the Mann Whitney test p = 0.01936 < 0.05 => Null hypothesis is rejected.  We can state that on rainy days there is more ridership at the NYC subway.
+
+If we look at the regression parameters we can appreciate that meteorological variables usually associated with rain have positive values, including the variable rain itself.  This points out what the Mann Whitney test stated.
+
+meanwindspdi      21.398801
+meantempi        -29.920590
+precipi           32.292600
+rain              22.553125
+Hour              67.418064
+maxtempi          23.017546
