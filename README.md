@@ -121,3 +121,9 @@ rain              22.553125
 Hour              67.418064
 maxtempi          23.017546
 ```
+
+# Section 5. Reflection
+5.1 Please discuss potential shortcomings of the methods of your analysis, including dataset and analysis, such as the linear regression model or statistical test.
+```
+Regarding the dataset it appears to be some kind of sample measurement frequency for each line, which can miss some type of trend that should be studied. At the regression model the dummy units variable parameters have very high values to those of the none dummy variables.  This translates to a strong dependecny on unit lines.  Also if instead of a p-critical value of 0.05 we had chosen 0.01, we could not have rejected the null hypothesis.
+```
