@@ -106,7 +106,7 @@ This plot just states similar information as the one before. Instead os visualiz
 
 ![alt text](https://cloud.githubusercontent.com/assets/7275475/12863555/ae45c4da-cc77-11e5-9acc-753f0a91b51f.png)
 
-At this plot we can see what it seems to be a ridership increase during change in work shifts, lunch time and dinner time. If we had rainy hours during each day, a more deep analysis could also be done, comparing it they happened at lunch times, for example.
+At this plot we can see what it seems to be a ridership increase during change in work shifts, lunch time and dinner time. If we had rainy hours during each day, a more deep analysis could also be done, comparing if they happened at lunch times, for example.
 
 
 # Section 4. Conclusion
