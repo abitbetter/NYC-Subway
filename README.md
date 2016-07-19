@@ -92,16 +92,20 @@ The previous value is a low value, saying that my regression model does not fit 
 
 3.1 Visualization of ENTRIESn_hourly for rainy days and one of ENTRIESn_hourly for non-rainy days.
 ![alt text](https://cloud.githubusercontent.com/assets/7275475/12863478/e100dab4-cc76-11e5-9efd-ea802f0cd9f4.png "NYC_Ridership_Histogram")
+
 Looking at first to this plot it might appear that on days with no rain ridership is higher than in days with rain.  But as we have demonstrated before, this is not true as Mann Whitney test shows.
 
 3.2 One visualization can be more freeform. You should feel free to implement something that we discussed in class (e.g., scatter plots, line plots) or attempt to implement something more advanced if you'd like.
 ![alt text](https://cloud.githubusercontent.com/assets/7275475/12863551/a7c477e6-cc77-11e5-8eef-c0901f1127ef.png)
+
 Here nothing strange seems to happen, as we can expect more ridership during working days (from Monday to Friday) than on weekends.
 
 ![alt text](https://cloud.githubusercontent.com/assets/7275475/12863553/aba5525e-cc77-11e5-8bab-1ec20a819c43.png)
+
 This plot just states similar information as the one before. Instead os visualizing one week we can observe the four weeks during one month.
 
 ![alt text](https://cloud.githubusercontent.com/assets/7275475/12863555/ae45c4da-cc77-11e5-9acc-753f0a91b51f.png)
+
 At this plot we can see what it seems to be a ridership increase during change in work shifts, lunch time and dinner time. If we had rainy hours during each day, a more deep analysis could also be done, comparing it they happened at lunch times, for example.
 
 
