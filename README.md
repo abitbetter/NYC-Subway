@@ -25,7 +25,7 @@ d) The chosen p-critical value is 0.05.
 
 1.2 Why is this statistical test applicable to the dataset? In particular, consider the assumptions that the test is making about the distribution of ridership in the two samples.
 ```
-Mann Whitney test makes the assumption of independent samples (with no overlap in ridership).  Also there are far more samples than 20 in the dataset and a priori both distributions are unknown.  Therefore the statistical test can be applied.
+Mann Whitney test makes the assumption of independent samples (with no overlap in ridership).  Also there are far more samples than 20 in the dataset and a priori both distributions are unknown.  Also there is no need for assuming a normal distribution. Therefore the statistical test can be applied.
 ```
 
 1.3 What results did you get from this statistical test? These should include the following numerical values: p-values, as well as the means for each of the two samples under test.
